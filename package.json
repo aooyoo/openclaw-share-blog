@@ -1,0 +1,24 @@
+{
+  "name": "openclaw-hn-blog",
+  "version": "1.0.0",
+  "description": "OpenClaw HN Daily - Hacker News OpenClaw Topics Blog",
+  "main": "index.html",
+  "scripts": {
+    "fetch": "node fetch-hn-posts.js",
+    "schedule": "node schedule-daily-posts.js",
+    "publish": "npm run fetch && npm run schedule",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "openclaw",
+    "hackernews",
+    "blog",
+    "automation"
+  ],
+  "author": "aooyooClaw",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aooyoo/openclaw-hn-blog.git"
+  }
+}

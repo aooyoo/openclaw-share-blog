@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw HN Daily - Hacker News OpenClaw Topics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .post {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .post:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .post-meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        
+        .post-title {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .post-title a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .post-title a:hover {
+            color: #764ba2;
+        }
+        
+        .post-content {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #444;
+        }
+        
+        .post-stats {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .stat-icon {
+            font-size: 1.2em;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+            font-size: 1.2em;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .post {
+                padding: 20px;
+            }
+            
+            .post-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🦞 OpenClaw HN Daily</h1>
+            <p>每日精选 Hacker News 上的 OpenClaw 热门话题</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div id="posts">
+            <div class="loading">加载中...</div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>Powered by <a href="https://openclaw.ai" target="_blank">OpenClaw</a> | 数据来源: <a href="https://news.ycombinator.com" target="_blank">Hacker News</a></p>
+    </footer>
+    
+    <script>
+        // Fetch posts from JSON file
+        fetch('posts.json')
+            .then(response => response.json())
+            .then(posts => {
+                const postsContainer = document.getElementById('posts');
+                postsContainer.innerHTML = '';
+                
+                posts.slice(0, 20).forEach(post => {
+                    const postElement = document.createElement('div');
+                    postElement.className = 'post';
+                    postElement.innerHTML = `
+                        <div class="post-meta">${post.date}</div>
+                        <h2 class="post-title">
+                            <a href="${post.hn_link}" target="_blank">${post.title}</a>
+                        </h2>
+                        <div class="post-content">
+                            ${post.summary}
+                        </div>
+                        <div class="post-stats">
+                            <div class="stat">
+                                <span class="stat-icon">👍</span>
+                                <span>${post.points} upvotes</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">💬</span>
+                                <span>${post.comments} comments</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">🔗</span>
+                                <a href="${post.url}" target="_blank">原文链接</a>
+                            </div>
+                        </div>
+                    `;
+                    postsContainer.appendChild(postElement);
+                });
+            })
+            .catch(error => {
+                console.error('Error loading posts:', error);
+                document.getElementById('posts').innerHTML = `
+                    <div class="post">
+                        <p>加载失败，请稍后重试。</p>
+                    </div>
+                `;
+            });
+    </script>
+</body>
+</html>
