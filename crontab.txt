@@ -1,0 +1,4 @@
+# OpenClaw HN Daily - Auto Update Cron Job
+# Run every day at 9:00 AM CST (1:00 AM UTC)
+
+0 9 * * * /Users/jerry/clawd/openclaw-hn-blog/auto-update.sh >> /Users/jerry/clawd/openclaw-hn-blog/logs/auto-update.log 2>&1
