@@ -1,0 +1,123 @@
+---
+layout: default
+---
+<article class="post">
+    <div class="post-meta">{{ page.date | date: "%Y-%m-%d" }}</div>
+    
+    <h1 class="post-title">{{ page.title }}</h1>
+    
+    <div class="post-stats">
+        <div class="stat">
+            <span class="stat-icon">👍</span>
+            <span>{{ page.points }} upvotes</span>
+        </div>
+        <div class="stat">
+            <span class="stat-icon">💬</span>
+            <span>{{ page.comments }} comments</span>
+        </div>
+        <div class="stat">
+            <span class="stat-icon">👤</span>
+            <span>{{ page.author }}</span>
+        </div>
+    </div>
+    
+    <div class="post-content">
+        {{ content }}
+    </div>
+    
+    <div class="post-links">
+        <h3>链接</h3>
+        <ul>
+            <li><strong>Hacker News 讨论</strong>: <a href="{{ page.hn_link }}" target="_blank">{{ page.points }} upvotes, {{ page.comments }} comments</a></li>
+            <li><strong>原文链接</strong>: <a href="{{ page.original_url }}" target="_blank">{{ page.original_url }}</a></li>
+        </ul>
+    </div>
+</article>
+
+<style>
+    .post {
+        padding: 0;
+        margin-bottom: 80px;
+    }
+    
+    .post-meta {
+        color: #888;
+        font-size: 0.85em;
+        margin-bottom: 16px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    
+    .post-title {
+        font-size: 2em;
+        margin-bottom: 20px;
+        font-weight: 400;
+        letter-spacing: -0.03em;
+        color: #000;
+    }
+    
+    .post-stats {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .stat {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #666;
+        font-size: 0.85em;
+        font-weight: 300;
+    }
+    
+    .stat-icon {
+        font-size: 1em;
+        opacity: 0.6;
+    }
+    
+    .post-content {
+        font-size: 1.05em;
+        line-height: 1.8;
+        color: #333;
+        font-weight: 300;
+    }
+    
+    .post-content p {
+        margin-bottom: 1em;
+    }
+    
+    .post-links {
+        margin-top: 40px;
+        padding-top: 30px;
+        border-top: 1px solid #e0e0e0;
+    }
+    
+    .post-links h3 {
+        font-size: 1.2em;
+        margin-bottom: 16px;
+        font-weight: 400;
+    }
+    
+    .post-links ul {
+        list-style: none;
+    }
+    
+    .post-links li {
+        margin-bottom: 12px;
+        color: #666;
+    }
+    
+    .post-links a {
+        color: #000;
+        text-decoration: none;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .post-links a:hover {
+        border-color: #000;
+    }
+</style>

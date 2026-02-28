@@ -1,0 +1,46 @@
+# Site settings
+title: OpenClaw HN Daily
+description: 每日精选 Hacker News 上的 OpenClaw 热门话题
+baseurl: ""
+url: "https://aooyoo.github.io/openclaw-share-blog"
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .gitignore
+  - README.md
+  - SETUP.md
+  - package.json
+  - fetch-hn-posts.js
+  - schedule-daily-posts.js
+  - auto-update.sh
+  - install-cron.sh
+  - crontab.txt
+  - migrate-to-jekyll.js
+  - posts.json
+  - daily-posts.json
+
+# Pagination
+paginate: 10
+paginate_path: "/page/:num/"
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"

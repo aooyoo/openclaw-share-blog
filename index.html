@@ -1,225 +1,109 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenClaw HN Daily - Hacker News OpenClaw Topics</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+---
+layout: default
+---
+<div id="posts">
+    {% for post in site.posts limit: 20 %}
+    <article class="post">
+        <div class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</div>
         
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.7;
-            color: #000;
-            background: #fff;
-        }
+        <h2 class="post-title">
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </h2>
         
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 60px 40px;
-        }
+        <div class="post-stats">
+            <div class="stat">
+                <span class="stat-icon">👍</span>
+                <span>{{ post.points }} upvotes</span>
+            </div>
+            <div class="stat">
+                <span class="stat-icon">💬</span>
+                <span>{{ post.comments }} comments</span>
+            </div>
+        </div>
         
-        header {
-            border-bottom: 1px solid #e0e0e0;
-            padding: 60px 0;
-            text-align: center;
-            margin-bottom: 80px;
-        }
-        
-        header h1 {
-            font-size: 2.2em;
-            margin-bottom: 12px;
-            font-weight: 400;
-            letter-spacing: -0.02em;
-        }
-        
-        header p {
-            font-size: 1em;
-            color: #666;
-            font-weight: 300;
-        }
-        
+        <div class="post-excerpt">
+            {{ post.excerpt }}
+        </div>
+    </article>
+    {% endfor %}
+</div>
+
+<style>
+    .post {
+        padding: 0;
+        margin-bottom: 80px;
+        border: none;
+    }
+    
+    .post-meta {
+        color: #888;
+        font-size: 0.85em;
+        margin-bottom: 16px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    
+    .post-title {
+        font-size: 2em;
+        margin-bottom: 20px;
+        font-weight: 400;
+        letter-spacing: -0.03em;
+    }
+    
+    .post-title a {
+        color: #000;
+        text-decoration: none;
+        border-bottom: 1px solid #e0e0e0;
+        transition: border-color 0.2s;
+    }
+    
+    .post-title a:hover {
+        border-color: #000;
+    }
+    
+    .post-stats {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .stat {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #666;
+        font-size: 0.85em;
+        font-weight: 300;
+    }
+    
+    .stat-icon {
+        font-size: 1em;
+        opacity: 0.6;
+    }
+    
+    .post-excerpt {
+        font-size: 1.05em;
+        line-height: 1.8;
+        color: #333;
+        font-weight: 300;
+    }
+    
+    .post-excerpt p {
+        margin-bottom: 0;
+    }
+    
+    @media (max-width: 768px) {
         .post {
-            padding: 0;
-            margin-bottom: 80px;
-            border: none;
-        }
-        
-        .post-meta {
-            color: #888;
-            font-size: 0.85em;
-            margin-bottom: 16px;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+            margin-bottom: 60px;
         }
         
         .post-title {
-            font-size: 2em;
-            margin-bottom: 20px;
-            font-weight: 400;
-            letter-spacing: -0.03em;
-        }
-        
-        .post-title a {
-            color: #000;
-            text-decoration: none;
-            border-bottom: 1px solid #e0e0e0;
-            transition: border-color 0.2s;
-        }
-        
-        .post-title a:hover {
-            border-color: #000;
-        }
-        
-        .post-content {
-            font-size: 1.05em;
-            line-height: 1.8;
-            color: #333;
-            font-weight: 300;
+            font-size: 1.6em;
         }
         
         .post-stats {
-            display: flex;
-            gap: 30px;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #e0e0e0;
+            gap: 20px;
         }
-        
-        .stat {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #666;
-            font-size: 0.85em;
-            font-weight: 300;
-        }
-        
-        .stat-icon {
-            font-size: 1em;
-            opacity: 0.6;
-        }
-        
-        .footer {
-            text-align: center;
-            padding: 80px 0;
-            color: #888;
-            font-size: 0.85em;
-            border-top: 1px solid #e0e0e0;
-            margin-top: 80px;
-        }
-        
-        .footer a {
-            color: #000;
-            text-decoration: none;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .loading {
-            text-align: center;
-            padding: 100px 20px;
-            color: #888;
-            font-size: 1.1em;
-            font-weight: 300;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 40px 24px;
-            }
-            
-            header {
-                padding: 40px 0;
-                margin-bottom: 60px;
-            }
-            
-            header h1 {
-                font-size: 1.8em;
-            }
-            
-            .post {
-                margin-bottom: 60px;
-            }
-            
-            .post-title {
-                font-size: 1.6em;
-            }
-            
-            .post-stats {
-                gap: 20px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>🦞 OpenClaw HN Daily</h1>
-            <p>每日精选 Hacker News 上的 OpenClaw 热门话题</p>
-        </div>
-    </header>
-    
-    <div class="container">
-        <div id="posts">
-            <div class="loading">加载中...</div>
-        </div>
-    </div>
-    
-    <footer class="footer">
-        <p>Powered by <a href="https://openclaw.ai" target="_blank">OpenClaw</a> | 数据来源: <a href="https://news.ycombinator.com" target="_blank">Hacker News</a></p>
-    </footer>
-    
-    <script>
-        // Fetch posts from JSON file
-        fetch('posts.json')
-            .then(response => response.json())
-            .then(posts => {
-                const postsContainer = document.getElementById('posts');
-                postsContainer.innerHTML = '';
-                
-                posts.slice(0, 20).forEach(post => {
-                    const postElement = document.createElement('div');
-                    postElement.className = 'post';
-                    postElement.innerHTML = `
-                        <div class="post-meta">${post.date}</div>
-                        <h2 class="post-title">
-                            <a href="${post.hn_link}" target="_blank">${post.title}</a>
-                        </h2>
-                        <div class="post-content">
-                            ${post.summary}
-                        </div>
-                        <div class="post-stats">
-                            <div class="stat">
-                                <span class="stat-icon">👍</span>
-                                <span>${post.points} upvotes</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-icon">💬</span>
-                                <span>${post.comments} comments</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-icon">🔗</span>
-                                <a href="${post.url}" target="_blank" style="color: #000; text-decoration: none; border-bottom: 1px solid #e0e0e0;">原文链接</a>
-                            </div>
-                        </div>
-                    `;
-                    postsContainer.appendChild(postElement);
-                });
-            })
-            .catch(error => {
-                console.error('Error loading posts:', error);
-                document.getElementById('posts').innerHTML = `
-                    <div class="post">
-                        <p>加载失败，请稍后重试。</p>
-                    </div>
-                `;
-            });
-    </script>
-</body>
-</html>
+    }
+</style>
