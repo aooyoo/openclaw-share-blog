@@ -8,6 +8,7 @@ url: "https://aooyoo.github.io"
 markdown: kramdown
 theme: minima
 plugins:
+  - jekyll-paginate
   - jekyll-feed
   - jekyll-seo-tag
 

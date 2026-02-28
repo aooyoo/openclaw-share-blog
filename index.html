@@ -2,7 +2,7 @@
 layout: default
 ---
 <div id="posts">
-    {% for post in site.posts limit: 20 %}
+    {% for post in paginator.posts %}
     <article class="post">
         <div class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</div>
         
@@ -27,6 +27,23 @@ layout: default
     </article>
     {% endfor %}
 </div>
+
+<!-- Pagination -->
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+    {% if paginator.previous_page %}
+        <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}" class="pagination-prev">← 上一页</a>
+    {% endif %}
+    
+    <span class="pagination-info">
+        第 {{ paginator.page }} 页 / 共 {{ paginator.total_pages }} 页
+    </span>
+    
+    {% if paginator.next_page %}
+        <a href="{{ site.baseurl }}{{ paginator.next_page_path }}" class="pagination-next">下一页 →</a>
+    {% endif %}
+</div>
+{% endif %}
 
 <style>
     .post {
@@ -93,6 +110,33 @@ layout: default
         margin-bottom: 0;
     }
     
+    /* Pagination */
+    .pagination {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 0;
+        border-top: 1px solid #e0e0e0;
+        margin-top: 60px;
+    }
+    
+    .pagination a {
+        color: #000;
+        text-decoration: none;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 8px 16px;
+        transition: border-color 0.2s;
+    }
+    
+    .pagination a:hover {
+        border-color: #000;
+    }
+    
+    .pagination-info {
+        color: #888;
+        font-size: 0.9em;
+    }
+    
     @media (max-width: 768px) {
         .post {
             margin-bottom: 60px;
@@ -104,6 +148,11 @@ layout: default
         
         .post-stats {
             gap: 20px;
+        }
+        
+        .pagination {
+            flex-direction: column;
+            gap: 16px;
         }
     }
 </style>
