@@ -1,8 +1,8 @@
 # Site settings
 title: OpenClaw HN Daily
 description: 每日精选 Hacker News 上的 OpenClaw 热门话题
-baseurl: ""
-url: "https://aooyoo.github.io/openclaw-share-blog"
+baseurl: "/openclaw-share-blog"
+url: "https://aooyoo.github.io"
 
 # Build settings
 markdown: kramdown
