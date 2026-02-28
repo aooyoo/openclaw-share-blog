@@ -1,5 +1,77 @@
 [
   {
+    "hn_id": "47183503",
+    "title": "Setting up OpenClaw on a cloud VM",
+    "url": "https://blog.skypilot.co/openclaw-on-skypilot/",
+    "hn_link": "https://news.ycombinator.com/item?id=47183503",
+    "points": 75,
+    "comments": 55,
+    "author": "hopechong",
+    "date": "2026-02-27T18:06:26.000Z",
+    "summary": "<p><strong>Hacker News 热度：</strong> 75 upvotes, 55 条评论</p>\n<p><strong>原文链接：</strong> <a href=\"https://blog.skypilot.co/openclaw-on-skypilot/\" target=\"_blank\">https://blog.skypilot.co/openclaw-on-skypilot/</a></p>\n<p><em>发布时间：2026/2/27 18:06:26</em></p>",
+    "created_at": "2026-02-28T02:12:18.969Z"
+  },
+  {
+    "hn_id": "47154803",
+    "title": "Sandboxes won't save you from OpenClaw",
+    "url": "https://tachyon.so/blog/sandboxes-wont-save-you",
+    "hn_link": "https://news.ycombinator.com/item?id=47154803",
+    "points": 112,
+    "comments": 104,
+    "author": "logicx24",
+    "date": "2026-02-25T17:37:04.000Z",
+    "summary": "<p><strong>Hacker News 热度：</strong> 112 upvotes, 104 条评论</p>\n<p><strong>原文链接：</strong> <a href=\"https://tachyon.so/blog/sandboxes-wont-save-you\" target=\"_blank\">https://tachyon.so/blog/sandboxes-wont-save-you</a></p>\n<p><em>发布时间：2026/2/25 17:37:04</em></p>",
+    "created_at": "2026-02-28T02:12:18.969Z"
+  },
+  {
+    "hn_id": "47147183",
+    "title": "Ask HN: Share your productive usage of OpenClaw",
+    "url": "https://news.ycombinator.com/item?id=47147183",
+    "hn_link": "https://news.ycombinator.com/item?id=47147183",
+    "points": 101,
+    "comments": 83,
+    "author": "aavci",
+    "date": "2026-02-25T04:03:26.000Z",
+    "summary": "<p><strong>Hacker News 热度：</strong> 101 upvotes, 83 条评论</p>\n<p><em>发布时间：2026/2/25 04:03:26</em></p>",
+    "created_at": "2026-02-28T02:12:18.969Z"
+  },
+  {
+    "hn_id": "47129647",
+    "title": "You are not supposed to install OpenClaw on your personal computer",
+    "url": "https://twitter.com/BenjaminBadejo/status/2025987544853188836",
+    "hn_link": "https://news.ycombinator.com/item?id=47129647",
+    "points": 236,
+    "comments": 185,
+    "author": "bundie",
+    "date": "2026-02-23T22:05:27.000Z",
+    "summary": "<p><strong>Hacker News 热度：</strong> 236 upvotes, 185 条评论</p>\n<p><strong>原文链接：</strong> <a href=\"https://twitter.com/BenjaminBadejo/status/2025987544853188836\" target=\"_blank\">https://twitter.com/BenjaminBadejo/status/2025987544853188836</a></p>\n<p><em>发布时间：2026/2/23 22:05:27</em></p>",
+    "created_at": "2026-02-28T02:12:18.969Z"
+  },
+  {
+    "hn_id": "47115805",
+    "title": "Google restricting Google AI Pro/Ultra subscribers for using OpenClaw",
+    "url": "https://discuss.ai.google.dev/t/account-restricted-without-warning-google-ai-ultra-oauth-via-openclaw/122778",
+    "hn_link": "https://news.ycombinator.com/item?id=47115805",
+    "points": 802,
+    "comments": 702,
+    "author": "srigi",
+    "date": "2026-02-22T23:07:55.000Z",
+    "summary": "<p><strong>Hacker News 热度：</strong> 802 upvotes, 702 条评论</p>\n<p><strong>原文链接：</strong> <a href=\"https://discuss.ai.google.dev/t/account-restricted-without-warning-google-ai-ultra-oauth-via-openclaw/122778\" target=\"_blank\">https://discuss.ai.google.dev/t/account-restricted-without-warning-google-ai-ultra-oauth-via-openclaw/122778</a></p>\n<p><em>发布时间：2026/2/22 23:07:55</em></p>",
+    "created_at": "2026-02-28T02:12:18.969Z"
+  },
+  {
+    "hn_id": "47080785",
+    "title": "The #1 most downloaded skill on OpenClaw marketplace was malware",
+    "url": "https://twitter.com/chiefofautism/status/2024483631067021348",
+    "hn_link": "https://news.ycombinator.com/item?id=47080785",
+    "points": 66,
+    "comments": 8,
+    "author": "Umofomia",
+    "date": "2026-02-19T22:47:21.000Z",
+    "summary": "<p><strong>Hacker News 热度：</strong> 66 upvotes, 8 条评论</p>\n<p><strong>原文链接：</strong> <a href=\"https://twitter.com/chiefofautism/status/2024483631067021348\" target=\"_blank\">https://twitter.com/chiefofautism/status/2024483631067021348</a></p>\n<p><em>发布时间：2026/2/19 22:47:21</em></p>",
+    "created_at": "2026-02-28T02:12:18.969Z"
+  },
+  {
     "hn_id": "47064470",
     "title": "OpenClaw is dangerous",
     "url": "https://12gramsofcarbon.com/p/tech-things-openclaw-is-dangerous",
