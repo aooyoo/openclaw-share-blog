@@ -32,6 +32,10 @@ layout: default
             <li><strong>原文链接</strong>: <a href="{{ page.original_url }}" target="_blank">{{ page.original_url }}</a></li>
         </ul>
     </div>
+    
+    <div class="post-nav">
+        <a href="{{ site.baseurl }}/">← 返回首页</a>
+    </div>
 </article>
 
 <style>
@@ -118,6 +122,23 @@ layout: default
     }
     
     .post-links a:hover {
+        border-color: #000;
+    }
+    
+    .post-nav {
+        margin-top: 60px;
+        padding-top: 30px;
+        border-top: 1px solid #e0e0e0;
+    }
+    
+    .post-nav a {
+        color: #000;
+        text-decoration: none;
+        border-bottom: 1px solid #e0e0e0;
+        font-size: 0.9em;
+    }
+    
+    .post-nav a:hover {
         border-color: #000;
     }
 </style>
