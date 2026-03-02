@@ -349,6 +349,20 @@
       "created_at": "2026-02-19T13:40:24.841Z",
       "scheduled_for": "2026-03-01",
       "scheduled_at": "2026-03-01T03:38:40.867Z"
+    },
+    {
+      "hn_id": "46870027",
+      "title": "SecureClaw – 100% free social-driven security platform for OpenClaw",
+      "url": "https://secureclaw.dev/",
+      "hn_link": "https://news.ycombinator.com/item?id=46870027",
+      "points": 13,
+      "comments": 2,
+      "author": "alonsqrr",
+      "date": "2026-02-03T12:15:06.000Z",
+      "summary": "<p><strong>Hacker News 热度：</strong> 13 upvotes, 2 条评论</p>\n<p><strong>原文链接：</strong> <a href=\"https://secureclaw.dev/\" target=\"_blank\">https://secureclaw.dev/</a></p>\n<p><em>发布时间：2026/2/3 20:15:06</em></p>",
+      "created_at": "2026-02-19T13:40:24.841Z",
+      "scheduled_for": "2026-03-02",
+      "scheduled_at": "2026-03-02T03:27:58.401Z"
     }
   ],
   "published": []
