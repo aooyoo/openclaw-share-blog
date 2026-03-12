@@ -1,5 +1,17 @@
 [
   {
+    "hn_id": "47337249",
+    "title": "Show HN: Klaus – OpenClaw on a VM, batteries included",
+    "url": "https://klausai.com/",
+    "hn_link": "https://news.ycombinator.com/item?id=47337249",
+    "points": 129,
+    "comments": 69,
+    "author": "robthompson2018",
+    "date": "2026-03-11T15:54:23.000Z",
+    "summary": "<p><strong>Hacker News 热度：</strong> 129 upvotes, 69 条评论</p>\n<p><strong>原文链接：</strong> <a href=\"https://klausai.com/\" target=\"_blank\">https://klausai.com/</a></p>\n<p><em>发布时间：2026/3/11 15:54:23</em></p>",
+    "created_at": "2026-03-12T03:29:30.230Z"
+  },
+  {
     "hn_id": "47309953",
     "title": "Show HN: DenchClaw – Local CRM on Top of OpenClaw",
     "url": "https://github.com/DenchHQ/DenchClaw",
