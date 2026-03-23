@@ -1,5 +1,17 @@
 [
   {
+    "hn_id": "47479962",
+    "title": "OpenClaw is a security nightmare dressed up as a daydream",
+    "url": "https://composio.dev/content/openclaw-security-and-vulnerabilities",
+    "hn_link": "https://news.ycombinator.com/item?id=47479962",
+    "points": 308,
+    "comments": 218,
+    "author": "fs_software",
+    "date": "2026-03-22T17:35:28.000Z",
+    "summary": "<p><strong>Hacker News 热度：</strong> 308 upvotes, 218 条评论</p>\n<p><strong>原文链接：</strong> <a href=\"https://composio.dev/content/openclaw-security-and-vulnerabilities\" target=\"_blank\">https://composio.dev/content/openclaw-security-and-vulnerabilities</a></p>\n<p><em>发布时间：2026/3/22 17:35:28</em></p>",
+    "created_at": "2026-03-23T03:40:52.480Z"
+  },
+  {
     "hn_id": "47337249",
     "title": "Show HN: Klaus – OpenClaw on a VM, batteries included",
     "url": "https://klausai.com/",
