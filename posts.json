@@ -1,5 +1,29 @@
 [
   {
+    "hn_id": "47633396",
+    "title": "Tell HN: Anthropic no longer allowing Claude Code subscriptions to use OpenClaw",
+    "url": "https://news.ycombinator.com/item?id=47633396",
+    "hn_link": "https://news.ycombinator.com/item?id=47633396",
+    "points": 361,
+    "comments": 371,
+    "author": "firloop",
+    "date": "2026-04-03T22:55:24.000Z",
+    "summary": "<p><strong>Hacker News 热度：</strong> 361 upvotes, 371 条评论</p>\n<p><em>发布时间：2026/4/3 22:55:24</em></p>",
+    "created_at": "2026-04-04T03:29:59.721Z"
+  },
+  {
+    "hn_id": "47628608",
+    "title": "OpenClaw privilege escalation vulnerability",
+    "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33579",
+    "hn_link": "https://news.ycombinator.com/item?id=47628608",
+    "points": 271,
+    "comments": 163,
+    "author": "kykeonaut",
+    "date": "2026-04-03T16:21:32.000Z",
+    "summary": "<p><strong>Hacker News 热度：</strong> 271 upvotes, 163 条评论</p>\n<p><strong>原文链接：</strong> <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2026-33579\" target=\"_blank\">https://nvd.nist.gov/vuln/detail/CVE-2026-33579</a></p>\n<p><em>发布时间：2026/4/3 16:21:32</em></p>",
+    "created_at": "2026-04-04T03:29:59.721Z"
+  },
+  {
     "hn_id": "47602879",
     "title": "StepFun 3.5 Flash is #1 cost-effective model for OpenClaw tasks (300 battles)",
     "url": "https://app.uniclaw.ai/arena?tab=costEffectiveness&via=hn",
