@@ -503,6 +503,20 @@
       "created_at": "2026-04-21T04:09:20.531Z",
       "scheduled_for": "2026-04-21",
       "scheduled_at": "2026-04-21T04:09:20.577Z"
+    },
+    {
+      "hn_id": "47844269",
+      "title": "Anthropic says OpenClaw-style Claude CLI usage is allowed again",
+      "url": "https://docs.openclaw.ai/providers/anthropic",
+      "hn_link": "https://news.ycombinator.com/item?id=47844269",
+      "points": 483,
+      "comments": 274,
+      "author": "jmsflknr",
+      "date": "2026-04-21T03:43:03.000Z",
+      "summary": "<p><strong>Hacker News 热度：</strong> 483 upvotes, 274 条评论</p>\n<p><strong>原文链接：</strong> <a href=\"https://docs.openclaw.ai/providers/anthropic\" target=\"_blank\">https://docs.openclaw.ai/providers/anthropic</a></p>\n<p><em>发布时间：2026/4/21 03:43:03</em></p>",
+      "created_at": "2026-04-22T03:56:53.271Z",
+      "scheduled_for": "2026-04-22",
+      "scheduled_at": "2026-04-22T03:56:53.317Z"
     }
   ],
   "published": []
